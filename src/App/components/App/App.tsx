@@ -80,7 +80,7 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
     this.setState({ disabled: true })
     this.contract!.transfer(
       toAddress,
-      bigNumberify(parseFloat(amount) * (10 ^ 6))
+      bigNumberify(parseFloat(amount) * Math.pow(10, Decimals))
     ).then(() => {
       fetch('/results', {
         method: 'post',
@@ -109,7 +109,7 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
         <Typography>Your Ethereum Address:</Typography>
         <Typography paragraph> {walletAddress}</Typography>
         <Typography>Your USDT Balance:</Typography>
-        <Typography>{balance / (10 ^ Decimals)}</Typography>
+        <Typography>{balance / Math.pow(10, Decimals)}</Typography>
         <label htmlFor="" className={classes.field}>
           <Typography>Usdt to Send:</Typography>
           <TextField fullWidth value={amount} onChange={this.handleAmount} />
