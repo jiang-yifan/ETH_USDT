@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ETH_USDT/build/precache-manifest.1180c7fe2c172c324d1e9fee01b13161.js"
+  "/ETH_USDT/build/precache-manifest.3ba7ec2986fc50eed93164b9fab39d0e.js"
 );
 
 self.addEventListener('message', (event) => {

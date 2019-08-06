@@ -37,13 +37,13 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
           abi,
           this.signer
         )
-        this.getBalance()
+        this.getBalance(address)
         this.setState({ walletAddress: address })
       })
     }
   }
 
-  getBalance = () => {
+  getBalance = (address: string) => {
     this.contract!.balanceOf(address).then(balance => {
       this.setState({ balance: balance.toNumber() })
     })
@@ -95,7 +95,7 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
           comment: ''
         })
         alert(`Sent ${amount} to ${toAddress}`)
-        this.getBalance()
+        this.getBalance(this.state.walletAddress)
         fetch('/results', {
           method: 'post',
           body: JSON.stringify({

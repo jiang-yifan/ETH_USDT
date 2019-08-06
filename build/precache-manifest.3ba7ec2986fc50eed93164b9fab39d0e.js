@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d503060fd23f7a676a46a89f26911db4",
+    "revision": "3188259c4788366675003fe033ff5257",
     "url": "/ETH_USDT/build/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ETH_USDT/build/static/js/2.012d2f48.chunk.js"
   },
   {
-    "revision": "7919aa921a2db98b93cb",
-    "url": "/ETH_USDT/build/static/js/main.7b6b8a9f.chunk.js"
+    "revision": "505df576de6972860279",
+    "url": "/ETH_USDT/build/static/js/main.019c4c2d.chunk.js"
   },
   {
     "revision": "ddffd1ced2b40cdbf9fd",

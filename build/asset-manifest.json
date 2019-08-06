@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/ETH_USDT/build/static/js/main.7b6b8a9f.chunk.js",
-    "main.js.map": "/ETH_USDT/build/static/js/main.7b6b8a9f.chunk.js.map",
+    "main.js": "/ETH_USDT/build/static/js/main.019c4c2d.chunk.js",
+    "main.js.map": "/ETH_USDT/build/static/js/main.019c4c2d.chunk.js.map",
     "runtime~main.js": "/ETH_USDT/build/static/js/runtime~main.2445d382.js",
     "runtime~main.js.map": "/ETH_USDT/build/static/js/runtime~main.2445d382.js.map",
     "static/js/2.012d2f48.chunk.js": "/ETH_USDT/build/static/js/2.012d2f48.chunk.js",
     "static/js/2.012d2f48.chunk.js.map": "/ETH_USDT/build/static/js/2.012d2f48.chunk.js.map",
     "index.html": "/ETH_USDT/build/index.html",
-    "precache-manifest.1180c7fe2c172c324d1e9fee01b13161.js": "/ETH_USDT/build/precache-manifest.1180c7fe2c172c324d1e9fee01b13161.js",
+    "precache-manifest.3ba7ec2986fc50eed93164b9fab39d0e.js": "/ETH_USDT/build/precache-manifest.3ba7ec2986fc50eed93164b9fab39d0e.js",
     "service-worker.js": "/ETH_USDT/build/service-worker.js"
   }
 }
