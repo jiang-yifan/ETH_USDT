@@ -37,12 +37,16 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
           abi,
           this.signer
         )
-        this.contract!.balanceOf(address).then(balance => {
-          this.setState({ balance: balance.toNumber() })
-        })
+        this.getBalance()
         this.setState({ walletAddress: address })
       })
     }
+  }
+
+  getBalance = () => {
+    this.contract!.balanceOf(address).then(balance => {
+      this.setState({ balance: balance.toNumber() })
+    })
   }
 
   handleToAddress = (
@@ -81,17 +85,32 @@ export class UnconnectedApp extends React.PureComponent<IAppProps> {
     this.contract!.transfer(
       toAddress,
       bigNumberify(parseFloat(amount) * Math.pow(10, Decimals))
-    ).then(() => {
-      fetch('/results', {
-        method: 'post',
-        body: JSON.stringify({
-          toAddress,
-          amount,
-          comment,
-          from: walletAddress
+    )
+      .then(() => {
+        this.setState({
+          disabled: false,
+          toAddress: '',
+          balance: 0,
+          amount: '',
+          comment: ''
+        })
+        alert(`Sent ${amount} to ${toAddress}`)
+        this.getBalance()
+        fetch('/results', {
+          method: 'post',
+          body: JSON.stringify({
+            toAddress,
+            amount,
+            comment,
+            from: walletAddress
+          })
         })
       })
-    })
+      .catch(() => {
+        this.setState({
+          disabled: false
+        })
+      })
   }
 
   render() {
